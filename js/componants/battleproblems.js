@@ -123,7 +123,7 @@ Crafty.c("ProblemList", {
             for(var i=1; i<answersLength; i++){
                 answers.push("incorrectAnswer");
             }
-            correct = Math.floor(Math.random() * answersLength-1);
+            correct = Math.ceil(Math.random() * answersLength-1);
             answers.splice((correct), 0, answers.shift());
         }
         
@@ -149,7 +149,7 @@ Crafty.c("ProblemList", {
                 for(var j=1; j<answersLength; j++){
                     answers.push("incorrectAnswer");
                 }
-                correct = Math.floor(Math.random() * answersLength-1);
+                correct = Math.ceil(Math.random() * answersLength-1);
                 answers.splice((correct), 0, answers.shift());
             }
 
