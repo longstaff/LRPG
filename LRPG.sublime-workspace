@@ -1,8 +1,116 @@
 {
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fun",
+				"function"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"new",
+				"newIndex"
+			],
+			[
+				"_pr",
+				"_problem"
+			]
+		]
+	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 746,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/scenes/loading.js",
+			"settings":
+			{
+				"buffer_size": 558,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/componants/battleproblems.js",
+			"settings":
+			{
+				"buffer_size": 3750,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/componants/battlescreens.js",
+			"settings":
+			{
+				"buffer_size": 3453,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/componants/battlequestions.js",
+			"settings":
+			{
+				"buffer_size": 1995,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/componants/battlesolutions.js",
+			"settings":
+			{
+				"buffer_size": 3401,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/componants/battle.js",
+			"settings":
+			{
+				"buffer_size": 2862,
+				"line_ending": "Windows",
+				"name": "Crafty.c(\"Annoying\", {"
+			}
+		},
+		{
+			"file": "js/scenes/main.js",
+			"settings":
+			{
+				"buffer_size": 265,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
 	"file_history":
 	[
 		"/C/Users/Andrew/AppData/Local/Temp/scp37956/iworry/wp-content/themes/iworry/getinvolved.php",
@@ -134,12 +242,14 @@
 		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/frontpage.php",
 		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/functions.php"
 	],
+	"find":
+	{
+		"height": 34.0
+	},
 	"find_in_files":
 	{
-		"include_history":
-		[
-		],
-		"location_history":
+		"height": 0.0,
+		"where_history":
 		[
 		]
 	},
@@ -148,6 +258,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_children",
+			"destroy",
+			"ENTER",
+			"answerScreen",
+			"answerScreem",
+			"console",
+			"console.log",
+			"EnemyScreen",
+			"playerScreen",
+			"PlayerScreen",
 			"dk_speakup_js",
 			"h1",
 			"h2",
@@ -182,23 +302,252 @@
 		],
 		"reverse": false,
 		"show_context": true,
-		"use_buffer": false,
+		"use_buffer2": true,
 		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								746,
+								746
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/scenes/loading.js",
+					"settings":
+					{
+						"buffer_size": 558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								558
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/componants/battleproblems.js",
+					"settings":
+					{
+						"buffer_size": 3750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1373,
+								1374
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 645.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/componants/battlescreens.js",
+					"settings":
+					{
+						"buffer_size": 3453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2688,
+								2689
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 933.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/componants/battlequestions.js",
+					"settings":
+					{
+						"buffer_size": 1995,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								498,
+								498
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 168.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/componants/battlesolutions.js",
+					"settings":
+					{
+						"buffer_size": 3401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								499,
+								499
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 6,
+					"file": "js/componants/battle.js",
+					"settings":
+					{
+						"buffer_size": 2862,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2230,
+								2230
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Crafty.c(\"Annoying\", {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/scenes/main.js",
+					"settings":
+					{
+						"buffer_size": 265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								196,
+								196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
 	"layout":
 	{
 		"cells":
@@ -218,29 +567,42 @@
 		],
 		"cols":
 		[
-			0,
-			0.356964,
-			1
+			0.0,
+			0.459393411321,
+			1.0
 		],
 		"rows":
 		[
-			0,
-			1
+			0.0,
+			1.0
 		]
 	},
 	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
 	"save_all_on_build": true,
 	"select_file":
 	{
-		"height": 0,
+		"height": 0.0,
 		"selected_items":
 		[
 		],
-		"width": 0
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
 	},
 	"show_minimap": true,
+	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150,
+	"side_bar_width": 197.0,
 	"status_bar_visible": true
 }

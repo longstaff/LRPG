@@ -115,6 +115,13 @@ Backup*/
 UpgradeLog*.XML
 
 
+#################
+## Sublime text
+#################
+
+*.sublime-project
+*.sublime-workspace
+
 
 ############
 ## Windows
