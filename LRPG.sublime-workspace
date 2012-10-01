@@ -43,7 +43,7 @@
 			"file": "js/componants/battleproblems.js",
 			"settings":
 			{
-				"buffer_size": 3750,
+				"buffer_size": 3748,
 				"line_ending": "Windows"
 			}
 		},
@@ -67,7 +67,7 @@
 			"file": "js/componants/battlesolutions.js",
 			"settings":
 			{
-				"buffer_size": 3401,
+				"buffer_size": 3435,
 				"line_ending": "Windows"
 			}
 		},
@@ -113,6 +113,10 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Andrew/AppData/Local/Temp/scp07182/iworry/wp-content/themes/iworry/js/script.js",
+		"/C/Users/Andrew/AppData/Local/Temp/scp22268/iworry/wp-content/themes/iworry/frontpage.php",
+		"/C/Users/Andrew/AppData/Local/Temp/scp18379/iworry/wp-content/themes/iworry/style.css",
+		"/C/xampp/htdocs/LRPG/.gitignore",
 		"/C/Users/Andrew/AppData/Local/Temp/scp37956/iworry/wp-content/themes/iworry/getinvolved.php",
 		"/C/xampp/htdocs/iworry/wp-content/themes/iworry/header-post.php",
 		"/C/xampp/htdocs/iworry/wp-content/themes/iworry/header.php",
@@ -236,11 +240,7 @@
 		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_auction.php",
 		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_news.php",
 		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/news.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/category.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_news_main.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/boilerplate/sidebar.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/frontpage.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/functions.php"
+		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/category.php"
 	],
 	"find":
 	{
@@ -309,7 +309,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -371,15 +371,15 @@
 					"file": "js/componants/battleproblems.js",
 					"settings":
 					{
-						"buffer_size": 3750,
+						"buffer_size": 3748,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1373,
-								1374
+								1614,
+								1614
 							]
 						],
 						"settings":
@@ -389,7 +389,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 645.0,
+						"translation.y": 477.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -406,8 +406,8 @@
 						"selection":
 						[
 							[
-								2688,
-								2689
+								2097,
+								2097
 							]
 						],
 						"settings":
@@ -417,7 +417,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 933.0,
+						"translation.y": 861.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -440,7 +440,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 168.0,
@@ -453,15 +455,15 @@
 					"file": "js/componants/battlesolutions.js",
 					"settings":
 					{
-						"buffer_size": 3401,
+						"buffer_size": 3435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								499,
-								499
+								2382,
+								2382
 							]
 						],
 						"settings":
@@ -471,7 +473,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -494,8 +496,8 @@
 						"selection":
 						[
 							[
-								2230,
-								2230
+								274,
+								274
 							]
 						],
 						"settings":
@@ -506,7 +508,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 84.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -568,7 +570,7 @@
 		"cols":
 		[
 			0.0,
-			0.459393411321,
+			0.455911113005,
 			1.0
 		],
 		"rows":

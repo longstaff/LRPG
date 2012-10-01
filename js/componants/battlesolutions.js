@@ -28,14 +28,12 @@ Crafty.c("MultiChoiceSolution", {
         for(i=0; i<answers.length; i++){
             var index = i;
             this._choices[i] = Crafty.e("MultiChoiceAnswer")
-                .multiChoiceAnswer(answers[i], i===0)
+                .multiChoiceAnswer(answers[i], i, i===0)
                 .bind('Click', function(e) {
-                    console.log("clicked");
                     self.submitChoice();
                 })
                 .bind('MouseOver', function(e) {
-                    console.log("mouseover");
-                    self.selectChoice(index);
+                    self.selectChoice(this.getIndex());
                 })
                 .attr({
                     x:this.x, y:this.y + (20*i)
@@ -82,13 +80,16 @@ Crafty.c("MultiChoiceSolution", {
 Crafty.c("MultiChoiceAnswer", {
     
     _answer:"",
+    _index:0,
 
     init: function() {
-        this.requires("2D, DOM, Text, Mouse");
+        this.requires("2D, DOM, Mouse, Text");
     },
 
-    multiChoiceAnswer: function(answer, selected) { 
+    multiChoiceAnswer: function(answer, index, selected) { 
+        this.attr({w:170, h:20});
         this._answer = answer;
+        this._index = index;
         if(selected) this.renderSelected();
         else this.render();
         return this;
@@ -106,27 +107,38 @@ Crafty.c("MultiChoiceAnswer", {
 
     getAnswer:function(){
         return this._answer;
+    },
+
+    getIndex:function(){
+        return this._index;
     }
 
 });
 
 Crafty.c("AnswerScreen", {
+
     init: function() {
-        this.requires("2D, DOM, Text");
-        this.requires("Keyboard").bind('KeyDown', this.respond);
+        this.requires("2D, DOM, Text, Mouse, Keyboard").
+            bind('KeyDown', this.respondKeyboard).
+            attr({w:200,h:50});
+        this.bind('Click', this.respondMouse);
+        
     },
 
     answerScreen: function(correct) { 
-        var response = correct ? "Correct!" : "Wrong!";
+        var response = correct ? "Correct!<br/>Next" : "Wrong!<br/>Next";
         var colour = correct ? "#0F0" : "#F00";
         this.text(response).css({ "color":colour, "text-align":"center" });
         return this;
     },
 
-    respond: function(ev){
+    respondKeyboard: function(ev){
         if (this.isDown('ENTER')){
-            console.log("next page");
             Crafty.trigger("Battle.step");
         }
+    },
+
+    respondMouse:function(ev){
+        Crafty.trigger("Battle.step");
     }
 });
