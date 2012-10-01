@@ -31,7 +31,7 @@ Crafty.c("PlayerScreen", {
         }
 
         //RENDER NEW SOLUTIONS
-    	if(type === StaticFinal.MS || type === StaticFinal.MM){
+    	if(this._type === StaticFinal.MS || this._type === StaticFinal.MM){
     		this._screen = Crafty.e('MultiChoiceSolution').attr({x:this.x + 10, y:this.y +10}).multiChoiceSolution(this._answers);
             this.attach(this._screen);
     	}

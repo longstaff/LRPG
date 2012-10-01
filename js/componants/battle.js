@@ -51,22 +51,19 @@ Crafty.c("Battle", {
         
         //CHECK IF MULTIPLE
         if(this._type === StaticFinal.MM || this._type === StaticFinal.LM || this._type === StaticFinal.FM){
+            var nextProblem = this._problem.getNext();
             if(isCorrect === false){
-                console.log("isWrong");
                 //WRONG ANSWER
                 //TODO: DO DAMAGE HERE
                 this._playerScreen.answer(false);
                 this._enemyScreen.answer(false);
             }
-            var nextProblem = this._problem.getNext();
-            if(nextProblem){
-                console.log("isNext", nextProblem);
+            else if(nextProblem){
                 //SET NEXT PROBLEM
                 this._playerScreen.makeSolution(nextProblem);
                 this._enemyScreen.answer(true);
             }
             else{
-                console.log("noNext", nextProblem);
                 //FINISHED PROBLEM
                 //TODO: DO DAMAGE HERE
                 this._playerScreen.answer(true);

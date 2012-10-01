@@ -40,7 +40,7 @@ Crafty.c("ProblemGenerator", {
     },
 
     getNext: function(){
-        return;
+        return this._problem.getNext();
     },
 
     checkAnswer: function(answer){

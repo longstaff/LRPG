@@ -44,8 +44,6 @@ Crafty.c("MultipleQuestion", {
 
     	this._questions = [];
 
-    	console.log(problem);
-
 		for(i=0; i<problem.length; i++){
     		this._questions[i] = Crafty.e("SingleQuestion").singleQuestion(problem[i]);
     		if(width + padding + this._questions[i].w > targetWidth){
