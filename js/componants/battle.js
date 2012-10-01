@@ -54,7 +54,7 @@ Crafty.c("Battle", {
             var nextProblem = this._problem.getNext();
             if(isCorrect === false){
                 //WRONG ANSWER
-                //TODO: DO DAMAGE HERE
+                this._playerScreen.takeDamage(this._enemyData.damage);
                 this._playerScreen.answer(false);
                 this._enemyScreen.answer(false);
             }
@@ -65,7 +65,7 @@ Crafty.c("Battle", {
             }
             else{
                 //FINISHED PROBLEM
-                //TODO: DO DAMAGE HERE
+                this._enemyScreen.takeDamage(this._playerData.damage);
                 this._playerScreen.answer(true);
                 this._enemyScreen.answer(true);
             }
@@ -78,15 +78,20 @@ Crafty.c("Battle", {
     },
 
     nextQuestion:function(ev){
-        //this._playerScreen.makeSolution();
         if(this._playerScreen.isDead()){
-
+            Crafty.trigger("Battle.deadPlayer");
         }
         else if(this._enemyScreen.isDead()){
-
+            Crafty.trigger("Battle.deadEnemy");
         }
         else{
             this.initProblem();
         }
+    },
+
+    getPlayer:function(){
+        var player = this._playerData;
+        player.health.current = this._playerScreen.getHealth();
+        return player;
     }
 });

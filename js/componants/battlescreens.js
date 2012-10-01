@@ -124,6 +124,11 @@ Crafty.c("HealthBar", {
 
     takeDamage: function(damage){
         this._healthCurrent = Math.max(this._healthCurrent - damage, 0);
+        console.log(this._healthCurrent);
+    },
+
+    getHealth: function(){
+        return this._healthCurrent;
     },
 
     isDead:function(){
