@@ -46,18 +46,20 @@ Crafty.c("MultipleQuestion", {
 
 		for(i=0; i<problem.length; i++){
     		this._questions[i] = Crafty.e("SingleQuestion").singleQuestion(problem[i]);
-    		if(width + padding + this._questions[i].w > targetWidth){
+    		
+            var eleWidth = problem[i].length *6;
+
+            if(width + padding + eleWidth > targetWidth){
     			this.centerRow(currentRow, targetWidth, width);
     			currentRow = [this._questions[i]];
     			yoffset = yoffset + 20;
     			width = 0;
-    			console.log("overflow");
     		}
     		else{
     			currentRow.push(this._questions[i]);
     		}
     		this._questions[i].attr({x:this.x + width, y:this.y + yoffset});
-			width = width + padding + 70;
+			width = width + padding + eleWidth;
 
     		this.attach(this._questions[i]);
     	}
