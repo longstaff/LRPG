@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"_pla",
+				"_playerData"
+			],
+			[
 				"fun",
 				"function"
 			],
@@ -32,10 +36,13 @@
 			}
 		},
 		{
+			"contents": "Crafty.scene(\"loading\", function () {\n    //load takes an array of assets and a callback when complete\n    /*\n    Crafty.load([\"sprite.png\"], function () {\n        Crafty.scene(\"main\"); //when everything is loaded, run the main scene\n    });\n	*/\n\n    //black background with some loading text\n    Crafty.background(\"#000\");\n    Crafty.e(\"2D, DOM, Text\").attr({ w: 100, h: 20, x: 150, y: 120 })\n            .text(\"Loading\")\n            .css({ \"text-align\": \"center\", \"color\":\"#FFF\" });\n\n    Crafty.scene(\"main\");\n});",
 			"file": "js/scenes/loading.js",
+			"file_size": 572,
+			"file_write_time": 129933896308694480,
 			"settings":
 			{
-				"buffer_size": 558,
+				"buffer_size": 515,
 				"line_ending": "Windows"
 			}
 		},
@@ -43,7 +50,7 @@
 			"file": "js/componants/battleproblems.js",
 			"settings":
 			{
-				"buffer_size": 3748,
+				"buffer_size": 3772,
 				"line_ending": "Windows"
 			}
 		},
@@ -51,7 +58,7 @@
 			"file": "js/componants/battlescreens.js",
 			"settings":
 			{
-				"buffer_size": 3453,
+				"buffer_size": 3578,
 				"line_ending": "Windows"
 			}
 		},
@@ -59,7 +66,7 @@
 			"file": "js/componants/battlequestions.js",
 			"settings":
 			{
-				"buffer_size": 1995,
+				"buffer_size": 1992,
 				"line_ending": "Windows"
 			}
 		},
@@ -67,7 +74,7 @@
 			"file": "js/componants/battlesolutions.js",
 			"settings":
 			{
-				"buffer_size": 3435,
+				"buffer_size": 3627,
 				"line_ending": "Windows"
 			}
 		},
@@ -75,7 +82,7 @@
 			"file": "js/componants/battle.js",
 			"settings":
 			{
-				"buffer_size": 2862,
+				"buffer_size": 2997,
 				"line_ending": "Windows",
 				"name": "Crafty.c(\"Annoying\", {"
 			}
@@ -84,7 +91,7 @@
 			"file": "js/scenes/main.js",
 			"settings":
 			{
-				"buffer_size": 265,
+				"buffer_size": 1386,
 				"line_ending": "Windows"
 			}
 		}
@@ -258,6 +265,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console.log",
 			"_children",
 			"destroy",
 			"ENTER",
@@ -309,7 +317,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -343,15 +351,15 @@
 					"file": "js/scenes/loading.js",
 					"settings":
 					{
-						"buffer_size": 558,
+						"buffer_size": 515,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								558,
-								558
+								484,
+								323
 							]
 						],
 						"settings":
@@ -371,15 +379,15 @@
 					"file": "js/componants/battleproblems.js",
 					"settings":
 					{
-						"buffer_size": 3748,
+						"buffer_size": 3772,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1614,
-								1614
+								3131,
+								3131
 							]
 						],
 						"settings":
@@ -389,7 +397,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 477.0,
+						"translation.y": 1401.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -399,15 +407,15 @@
 					"file": "js/componants/battlescreens.js",
 					"settings":
 					{
-						"buffer_size": 3453,
+						"buffer_size": 3578,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2097,
-								2097
+								3377,
+								3386
 							]
 						],
 						"settings":
@@ -417,7 +425,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 861.0,
+						"translation.y": 1094.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -427,15 +435,15 @@
 					"file": "js/componants/battlequestions.js",
 					"settings":
 					{
-						"buffer_size": 1995,
+						"buffer_size": 1992,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								498,
-								498
+								1255,
+								1255
 							]
 						],
 						"settings":
@@ -445,7 +453,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 294.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -455,15 +463,15 @@
 					"file": "js/componants/battlesolutions.js",
 					"settings":
 					{
-						"buffer_size": 3435,
+						"buffer_size": 3627,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2382,
-								2382
+								3529,
+								3486
 							]
 						],
 						"settings":
@@ -473,7 +481,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 840.0,
+						"translation.y": 1053.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -489,15 +497,15 @@
 					"file": "js/componants/battle.js",
 					"settings":
 					{
-						"buffer_size": 2862,
+						"buffer_size": 2997,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								274,
-								274
+								1748,
+								1748
 							]
 						],
 						"settings":
@@ -508,7 +516,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 84.0,
+						"translation.y": 420.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -518,15 +526,15 @@
 					"file": "js/scenes/main.js",
 					"settings":
 					{
-						"buffer_size": 265,
+						"buffer_size": 1386,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								196,
-								196
+								847,
+								847
 							]
 						],
 						"settings":
@@ -570,7 +578,7 @@
 		"cols":
 		[
 			0.0,
-			0.455911113005,
+			0.391468369124,
 			1.0
 		],
 		"rows":

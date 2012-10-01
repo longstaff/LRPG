@@ -71,9 +71,18 @@ Crafty.c("Battle", {
             }
         }
         else{
-            //SINGLE ONLY, COMPLETE
-            this._playerScreen.answer(isCorrect);
-            this._enemyScreen.answer(isCorrect);
+            if(isCorrect === false){
+                //WRONG ANSWER
+                this._playerScreen.takeDamage(this._enemyData.damage);
+                this._playerScreen.answer(false);
+                this._enemyScreen.answer(false);
+            }
+            else{
+                //RIGHT PROBLEM
+                this._enemyScreen.takeDamage(this._playerData.damage);
+                this._playerScreen.answer(true);
+                this._enemyScreen.answer(true);
+            }
         }
     },
 

@@ -26,7 +26,7 @@ Crafty.c("PlayerScreen", {
         if(answers){
             this._answers = answers;
         }
-        if(type){
+        if(type !== undefined){
             this._type = type;
         }
 
