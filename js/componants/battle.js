@@ -32,7 +32,7 @@ Crafty.c("Battle", {
         this._playerData = player; 
     	this._enemyData = enemy; 
 
-    	this._playerScreen.attr({x:20, y:220}).healthBar({max:this._playerData.health.max, current:this._playerData.health.current});
+    	this._playerScreen.attr({x:20, y:220}).healthBar({max:this._playerData.health.max, current:this._playerData.health.current}, true);
     	this._enemyScreen.attr({x:180, y:20}).healthBar({max:this._enemyData.health.max, current:this._enemyData.health.current});
         this.initProblem();
 

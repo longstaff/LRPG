@@ -113,18 +113,40 @@ Crafty.c("HealthBar", {
 
     _healthMax:10,
     _healthCurrent:10,
+    _fullBar:{},
+    _currentBar:{},
 
-    init: function() {},
+    init: function() {
+        this.requires("2D");
+        this._fullBar = Crafty.e("2D, DOM").css({"background":"#ccc"});
+        this._currentBar = Crafty.e("2D, DOM").css({"background":"#F00"});
+        this.attach(this._fullBar, this._currentBar);
+    },
 
-    healthBar: function(health) {
+    healthBar: function(health, left) {
         this._healthMax = health.max || 10;
         this._healthCurrent = health.current || 10;
+        
+        if(left){
+            this._fullBar.attr({x:this.x-10, h:this.h, w:10});
+            this._currentBar.attr({x:this.x-10, w:10});
+        }else{
+            this._fullBar.attr({x:this.x + this.w, h:this.h, w:10});
+            this._currentBar.attr({x:this.x + this.w, w:10});
+        }
+        this.drawHealth();
+
         return this;
+    },
+
+    drawHealth: function(){
+        var perc = this._healthCurrent/this._healthMax;
+        this._currentBar.attr({h:this.h*perc, y:this.y + this.h - (this.h*perc)});
     },
 
     takeDamage: function(damage){
         this._healthCurrent = Math.max(this._healthCurrent - damage, 0);
-        console.log(this._healthCurrent);
+        this.drawHealth();
     },
 
     getHealth: function(){

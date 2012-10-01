@@ -1,6 +1,7 @@
 Crafty.scene("loading", function () {
     //load takes an array of assets and a callback when complete
-    /*Crafty.load(["sprite.png"], function () {
+    /*
+    Crafty.load(["sprite.png"], function () {
         Crafty.scene("main"); //when everything is loaded, run the main scene
     });
 	*/
@@ -11,5 +12,5 @@ Crafty.scene("loading", function () {
             .text("Loading")
             .css({ "text-align": "center", "color":"#FFF" });
 
-    Crafty.scene("main"); //when everything is loaded, run the main scene
+    Crafty.scene("main");
 });
