@@ -28,6 +28,9 @@ Crafty.c("ProblemGenerator", {
         else if(type === StaticFinal.LS || type === StaticFinal.LM){
             this._problem = Crafty.e('LetterHintProblem').letterHintProblem(this._level, type);
         }
+        else if(type === StaticFinal.FS || type === StaticFinal.FM){
+            this._problem = Crafty.e('FreeTypeProblem').freeTypeProblem(this._level, type);
+        }
         
     	else{
     		throw new Error("unsupported type");
@@ -122,6 +125,57 @@ Crafty.c("LetterHintProblem", {
     },
 
     letterHintProblem: function(level, type) { 
+        this._level = level; 
+        this._type = type; 
+        this.makeProblem();
+        return this;
+    },
+
+    makeProblem:function(){
+        if(this._type == StaticFinal.LS){
+            this._problem = this._problemList.singleProblem(this._level, 1);
+        }else{
+            this._problem = this._problemList.multiProblem(this._level, 1, 3);
+        }
+        return this._problem;
+    },
+
+    getProblem: function(){
+        return this._problem;
+    },
+
+    getNext:function(){
+        this._index = this._index+1;
+        return this._problem.answers[this._index];
+    },
+
+    checkAnswer: function(answer){
+        if(this._problem){
+            if(this._problem.answers[this._index][this._problem.correct[this._index]].toLowerCase() === answer.toLowerCase()){
+                return true;
+            }else{
+                return false;
+            }
+        } 
+        else{
+            throw new Error("no problem initiated, cannot check answer");
+        }
+    }
+});
+
+Crafty.c("FreeTypeProblem", {
+
+    _level:0,
+    _type:0,
+    _problem:{},
+    _problemList:{},
+    _index:0,
+
+    init: function() {
+        this._problemList = Crafty.e('ProblemList');
+    },
+
+    freeTypeProblem: function(level, type) { 
         this._level = level; 
         this._type = type; 
         this.makeProblem();

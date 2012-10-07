@@ -39,6 +39,10 @@ Crafty.c("PlayerScreen", {
             this._screen = Crafty.e('LetterHintSolution').attr({x:this.x + 10, y:this.y +10}).letterHintSolution(this._answers);
             this.attach(this._screen);
         }
+        else if(this._type === StaticFinal.FS || this._type === StaticFinal.FM){
+            this._screen = Crafty.e('FreeTypeSolution').attr({x:this.x + 10, y:this.y +10}).freeTypeSolution();
+            this.attach(this._screen);
+        }
     	else{
     		throw new Error("unsupported type");
     	}

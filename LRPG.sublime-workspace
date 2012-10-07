@@ -40,58 +40,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 746,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/scenes/loading.js",
-			"settings":
-			{
-				"buffer_size": 515,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/componants/battleproblems.js",
-			"settings":
-			{
-				"buffer_size": 5155,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/componants/battlescreens.js",
-			"settings":
-			{
-				"buffer_size": 4619,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/componants/battlequestions.js",
-			"settings":
-			{
-				"buffer_size": 1992,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/componants/battlesolutions.js",
-			"settings":
-			{
-				"buffer_size": 7145,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "js/componants/battle.js",
 			"settings":
 			{
-				"buffer_size": 3352,
+				"buffer_size": 0,
 				"line_ending": "Windows",
 				"name": "Crafty.c(\"Annoying\", {"
 			}
@@ -100,7 +52,7 @@
 			"file": "js/scenes/main.js",
 			"settings":
 			{
-				"buffer_size": 1606,
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		}
@@ -129,6 +81,12 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/LRPG/index.html",
+		"/C/xampp/htdocs/LRPG/js/scenes/loading.js",
+		"/C/xampp/htdocs/LRPG/js/componants/battleproblems.js",
+		"/C/xampp/htdocs/LRPG/js/componants/battlescreens.js",
+		"/C/xampp/htdocs/LRPG/js/componants/battlequestions.js",
+		"/C/xampp/htdocs/LRPG/js/componants/battlesolutions.js",
 		"/C/Users/Andrew/AppData/Local/Temp/scp37566/iworry/wp-content/themes/iworry/style.css",
 		"/C/Users/Andrew/AppData/Local/Temp/scp07182/iworry/wp-content/themes/iworry/js/script.js",
 		"/C/Users/Andrew/AppData/Local/Temp/scp22268/iworry/wp-content/themes/iworry/frontpage.php",
@@ -166,9 +124,7 @@
 		"/C/xampp/htdocs/iworry-static/js/plugins.js",
 		"/C/xampp/htdocs/iworry-static/css/style.css",
 		"/C/xampp/htdocs/iworry/wp-content/themes/iworry/sidebar_about.php",
-		"/C/xampp/htdocs/LRPG/index.html",
 		"/C/xampp/htdocs/LRPG/js/scenes/init.js",
-		"/C/xampp/htdocs/LRPG/js/scenes/loading.js",
 		"/C/xampp/htdocs/LRPG/js/scenes/main.js",
 		"/C/xampp/htdocs/hci/js/script.js",
 		"/C/xampp/htdocs/hci/css/style.css",
@@ -252,11 +208,7 @@
 		"/D/web/OGP/js/script.js",
 		"/C/xampp/htdocs/dswf/wp-config-sample.php",
 		"/C/xampp/htdocs/dswf/wp-config.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar-book.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_about.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_auction.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_news.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/news.php"
+		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar-book.php"
 	],
 	"find":
 	{
@@ -274,6 +226,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"letterHintSolution",
+			"\"answer",
+			"(), ",
 			"console.log",
 			"_children",
 			"destroy",
@@ -326,199 +281,28 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"sheets":
+			[
+			]
+		},
+		{
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 746,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								746,
-								746
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/scenes/loading.js",
-					"settings":
-					{
-						"buffer_size": 515,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								484,
-								323
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/componants/battleproblems.js",
-					"settings":
-					{
-						"buffer_size": 5155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3844,
-								3844
-							],
-							[
-								4617,
-								4617
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1176.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "js/componants/battlescreens.js",
-					"settings":
-					{
-						"buffer_size": 4619,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1073,
-								1091
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "js/componants/battlequestions.js",
-					"settings":
-					{
-						"buffer_size": 1992,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1255,
-								1255
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 210.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/componants/battlesolutions.js",
-					"settings":
-					{
-						"buffer_size": 7145,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3923,
-								3923
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1529.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 6,
 					"file": "js/componants/battle.js",
 					"settings":
 					{
-						"buffer_size": 3352,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								813,
-								813
+								0,
+								0
 							]
 						],
 						"settings":
@@ -535,19 +319,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 1,
 					"file": "js/scenes/main.js",
 					"settings":
 					{
-						"buffer_size": 1606,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1258,
-								1258
+								0,
+								0
 							]
 						],
 						"settings":
@@ -593,7 +377,7 @@
 		"cols":
 		[
 			0.0,
-			0.577771329078,
+			0.695589088799,
 			1.0
 		],
 		"rows":

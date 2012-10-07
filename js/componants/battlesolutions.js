@@ -141,8 +141,8 @@ Crafty.c("LetterHintSolution", {
         }
 
         for(i=0; i<length; i++){
-            this._letters[i] = Crafty.e("LetterHintAnswer")
-                .letterHintAnswer(i, i===0)
+            this._letters[i] = Crafty.e("LetterAnswer")
+                .letterAnswer(i, i===0, "_")
                 .attr({
                     x:this.x + (14*i), y:this.y 
                 });
@@ -163,11 +163,37 @@ Crafty.c("LetterHintSolution", {
                     this._letters[this._selectedIndex].setHighlight(false);
                 this._selectedIndex = this._selectedIndex - 1;
                 this._letters[this._selectedIndex].clearLetter().setHighlight(true);
+
+                for (var i = this._selectedIndex; i < this._letters.length-1; i++) {
+                    this._letters[i].setLetter(this._letters[i+1].getLetter());
+                };
             }
             //STOP BROWSER BACK
             ev.preventDefault();
         }
-        else if(this._letters.length > this._selectedIndex && ev.key >= 65 && ev.key <= 90){
+        else if (this.isDown('LEFT_ARROW')){
+            if(this._selectedIndex > 0){
+                if(this._letters.length > this._selectedIndex)
+                    this._letters[this._selectedIndex].setHighlight(false);
+                this._selectedIndex = this._selectedIndex - 1;
+                this._letters[this._selectedIndex].setHighlight(true);
+            }
+        }
+        else if (this.isDown('RIGHT_ARROW')){
+            if(this._selectedIndex < this._letters.length){
+                if(!(this._letters[this._selectedIndex].getLetter() === "_" && this._letters[this._selectedIndex+1].getLetter() === "_")){
+                    this._letters[this._selectedIndex].setHighlight(false);
+                    this._selectedIndex = this._selectedIndex + 1;
+                    this._letters[this._selectedIndex].setHighlight(true);
+                }
+            }
+        }
+        else if(this._letters.length > this._selectedIndex && (ev.key >= 65 && ev.key <= 90 || ev.key === 222 || ev.key === 192)){
+            
+            for (var i = this._letters.length-1; i>this._selectedIndex; i--) {
+                this._letters[i].setLetter(this._letters[i-1].getLetter());
+            };
+
             this._letters[this._selectedIndex].setLetter(this.fixedFromCharCode(ev.keyIdentifier)).setHighlight(false);
             this._selectedIndex = this._selectedIndex + 1;
             if(this._letters.length > this._selectedIndex)
@@ -176,8 +202,10 @@ Crafty.c("LetterHintSolution", {
     },
 
     fixedFromCharCode:function (codePt) {
-        codePt = parseInt(codePt.substring(2), 16)
-        if (codePt > 0xFFFF) {
+        codePt = parseInt(codePt.substring(2), 16);
+        if(codePt === 192) return "&Ouml;";
+        else if(codePt === 222) return "&Auml;";
+        else if (codePt > 0xFFFF) {
             codePt -= 0x10000;
             return String.fromCharCode(0xD800 + (codePt >> 10), 0xDC00 + (codePt & 0x3FF));
         } else {
@@ -195,9 +223,124 @@ Crafty.c("LetterHintSolution", {
 
 });
 
-Crafty.c("LetterHintAnswer", {
+
+Crafty.c("FreeTypeSolution", {
     
-    _answer:"_",
+    _selectedIndex:0,
+    _letters:[],
+
+    init: function() {
+        this.requires("2D, Keyboard").bind('KeyDown', this.keyboardHandler);
+    },
+
+    freeTypeSolution: function() { 
+        this.populateLetters();
+        return this;
+    },
+
+    populateLetters: function(){
+        var self = this, i;
+
+        if(this._letters.length !== 0){
+            for(i=0; i<this._letters.length; i++){
+                this.detach(this._letters[i]);
+                this._letters[i].destroy();
+            }
+            this._letters = [];
+        }
+        for(i=0; i<15; i++){
+            this._letters[i] = Crafty.e("LetterAnswer")
+                .letterAnswer(i, i===0, "")
+                .attr({
+                    x:this.x + (12*i), y:this.y 
+                });
+
+            this.attach(this._letters[i]);
+        }
+
+        this._selectedIndex = 0;
+    },
+
+    keyboardHandler:function(ev){
+        if (this.isDown('ENTER')){
+            this.submitChoice();
+        }
+        else if (this.isDown('BACKSPACE')){
+            if(this._selectedIndex > 0){
+                if(this._letters.length > this._selectedIndex)
+                    this._letters[this._selectedIndex].setHighlight(false);
+                this._selectedIndex = this._selectedIndex - 1;
+                this._letters[this._selectedIndex].clearLetter().setHighlight(true);
+
+                for (var i = this._selectedIndex; i < this._letters.length-1; i++) {
+                    this._letters[i].setLetter(this._letters[i+1].getLetter());
+                };
+            }
+            //STOP BROWSER BACK
+            ev.preventDefault();
+        }
+        else if (this.isDown('LEFT_ARROW')){
+            if(this._selectedIndex > 0){
+                if(this._letters.length > this._selectedIndex)
+                    this._letters[this._selectedIndex].setHighlight(false);
+                this._selectedIndex = this._selectedIndex - 1;
+                this._letters[this._selectedIndex].setHighlight(true);
+            }
+        }
+        else if (this.isDown('RIGHT_ARROW')){
+            if(this._selectedIndex < this._letters.length){
+                if(!(this._letters[this._selectedIndex].getLetter() === "" && this._letters[this._selectedIndex+1].getLetter() === "")){
+                    this._letters[this._selectedIndex].setHighlight(false);
+                    this._selectedIndex = this._selectedIndex + 1;
+                    this._letters[this._selectedIndex].setHighlight(true);
+                }
+            }
+        }
+        else if(this._letters.length > this._selectedIndex && (ev.key >= 65 && ev.key <= 90 || ev.key === 222 || ev.key === 192)){
+            
+            for (var i = this._letters.length-1; i>this._selectedIndex; i--) {
+                this._letters[i].setLetter(this._letters[i-1].getLetter());
+            };
+
+            this._letters[this._selectedIndex].setLetter(this.fixedFromCharCode(ev.keyIdentifier)).setHighlight(false);
+            this._selectedIndex = this._selectedIndex + 1;
+            if(this._letters.length > this._selectedIndex)
+                this._letters[this._selectedIndex].setHighlight(true);
+        }
+    },
+
+    fixedFromCharCode:function (codePt) {
+        codePt = parseInt(codePt.substring(2), 16);
+        if(codePt === 192) return "&Ouml;";
+        else if(codePt === 222) return "&Auml;";
+        else if (codePt > 0xFFFF) {
+            codePt -= 0x10000;
+            return String.fromCharCode(0xD800 + (codePt >> 10), 0xDC00 + (codePt & 0x3FF));
+        } else {
+            return String.fromCharCode(codePt);
+        }
+    },
+
+    submitChoice: function(){
+        var answer = "";
+        for(i=0; i<this._letters.length; i++){
+            var letter = this._letters[i].getLetter();
+            if(letter !== ""){
+                answer = answer.concat(letter);
+            }
+            else{
+                break;
+            }
+        }
+        Crafty.trigger("Battle.answer", {submit:answer});
+    }
+
+});
+
+Crafty.c("LetterAnswer", {
+    
+    _default:"",
+    _answer:"",
     _index:0,
     _highlight:false,
 
@@ -205,16 +348,18 @@ Crafty.c("LetterHintAnswer", {
         this.requires("2D, DOM, Mouse, Text");
     },
 
-    letterHintAnswer: function(index, selected) { 
+    letterAnswer: function(index, selected, defaultLetter) { 
         this.attr({w:12, h:20}).css({"background":"#ccc"});
         this._index = index;
+        this._default = defaultLetter;
+        this._answer = defaultLetter;
         if(selected) this._highlight = true;
         this.render();
         return this;
     },
 
     clearLetter: function() {
-        this._answer = "_";
+        this._answer = this._default;
         this.render();
         return this;
     },
@@ -242,9 +387,6 @@ Crafty.c("LetterHintAnswer", {
         else{
             this.css({ "color":"#000" });
         }
-    },
-
-    renderSelected:function(){
     },
 
     getAnswer:function(){
