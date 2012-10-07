@@ -35,6 +35,10 @@ Crafty.c("PlayerScreen", {
     		this._screen = Crafty.e('MultiChoiceSolution').attr({x:this.x + 10, y:this.y +10}).multiChoiceSolution(this._answers);
             this.attach(this._screen);
     	}
+        else if(this._type === StaticFinal.LS || this._type === StaticFinal.LM){
+            this._screen = Crafty.e('LetterHintSolution').attr({x:this.x + 10, y:this.y +10}).letterHintSolution(this._answers);
+            this.attach(this._screen);
+        }
     	else{
     		throw new Error("unsupported type");
     	}

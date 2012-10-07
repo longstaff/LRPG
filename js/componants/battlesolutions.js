@@ -115,6 +115,148 @@ Crafty.c("MultiChoiceAnswer", {
 
 });
 
+Crafty.c("LetterHintSolution", {
+    
+    _selectedIndex:0,
+    _letters:[],
+
+    init: function() {
+        this.requires("2D, Keyboard").bind('KeyDown', this.keyboardHandler);
+    },
+
+    letterHintSolution: function(answer) { 
+        this.populateLetters(answer[0].length);
+        return this;
+    },
+
+    populateLetters: function(length){
+        var self = this, i;
+
+        if(this._letters.length !== 0){
+            for(i=0; i<this._letters.length; i++){
+                this.detach(this._letters[i]);
+                this._letters[i].destroy();
+            }
+            this._letters = [];
+        }
+
+        for(i=0; i<length; i++){
+            this._letters[i] = Crafty.e("LetterHintAnswer")
+                .letterHintAnswer(i, i===0)
+                .attr({
+                    x:this.x + (14*i), y:this.y 
+                });
+
+            this.attach(this._letters[i]);
+        }
+
+        this._selectedIndex = 0;
+    },
+
+    keyboardHandler:function(ev){
+        if (this.isDown('ENTER')){
+            this.submitChoice();
+        }
+        else if (this.isDown('BACKSPACE')){
+            if(this._selectedIndex > 0){
+                if(this._letters.length > this._selectedIndex)
+                    this._letters[this._selectedIndex].setHighlight(false);
+                this._selectedIndex = this._selectedIndex - 1;
+                this._letters[this._selectedIndex].clearLetter().setHighlight(true);
+            }
+            //STOP BROWSER BACK
+            ev.preventDefault();
+        }
+        else if(this._letters.length > this._selectedIndex && ev.key >= 65 && ev.key <= 90){
+            this._letters[this._selectedIndex].setLetter(this.fixedFromCharCode(ev.keyIdentifier)).setHighlight(false);
+            this._selectedIndex = this._selectedIndex + 1;
+            if(this._letters.length > this._selectedIndex)
+                this._letters[this._selectedIndex].setHighlight(true);
+        }
+    },
+
+    fixedFromCharCode:function (codePt) {
+        codePt = parseInt(codePt.substring(2), 16)
+        if (codePt > 0xFFFF) {
+            codePt -= 0x10000;
+            return String.fromCharCode(0xD800 + (codePt >> 10), 0xDC00 + (codePt & 0x3FF));
+        } else {
+            return String.fromCharCode(codePt);
+        }
+    },
+
+    submitChoice: function(){
+        var answer = "";
+        for(i=0; i<this._letters.length; i++){
+            answer = answer.concat(this._letters[i].getLetter());
+        }
+        Crafty.trigger("Battle.answer", {submit:answer});
+    }
+
+});
+
+Crafty.c("LetterHintAnswer", {
+    
+    _answer:"_",
+    _index:0,
+    _highlight:false,
+
+    init: function() {
+        this.requires("2D, DOM, Mouse, Text");
+    },
+
+    letterHintAnswer: function(index, selected) { 
+        this.attr({w:12, h:20}).css({"background":"#ccc"});
+        this._index = index;
+        if(selected) this._highlight = true;
+        this.render();
+        return this;
+    },
+
+    clearLetter: function() {
+        this._answer = "_";
+        this.render();
+        return this;
+    },
+
+    getLetter: function() {
+        return this._answer;
+    },
+    setLetter: function(letter) {
+        this._answer = letter;
+        this.render();
+        return this;
+    },
+
+    setHighlight:function(highlight){
+        this._highlight = highlight;
+        this.render();
+        return this;
+    },
+
+    render:function(){
+        this.text(this._answer)
+        if(this._highlight){
+            this.css({ "color":"#F00" });
+        }
+        else{
+            this.css({ "color":"#000" });
+        }
+    },
+
+    renderSelected:function(){
+    },
+
+    getAnswer:function(){
+        return this._answer;
+    },
+
+    getIndex:function(){
+        return this._index;
+    }
+
+});
+
 Crafty.c("AnswerScreen", {
 
     init: function() {

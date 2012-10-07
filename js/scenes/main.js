@@ -23,7 +23,7 @@ Crafty.scene("main", function () {
 Crafty.scene("battleScene", function () {
     Crafty.background("#000");
 
-    var type = Math.floor(Math.random()*2) === 1 ? StaticFinal.MS : StaticFinal.MM ;
+    var type = Math.floor(Math.random()*4);
     this.battle = Crafty.e("Battle").battle(1, type, LRPG.player, {health:{max:6, current:6}, damage:1});
 
     this.bind("Battle.deadPlayer", endGame);

@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"requires"
+			],
+			[
+				"_heal",
+				"_healthMax"
+			],
+			[
+				"cli",
+				"Click"
+			],
+			[
 				"_pla",
 				"_playerData"
 			],
@@ -36,10 +48,7 @@
 			}
 		},
 		{
-			"contents": "Crafty.scene(\"loading\", function () {\n    //load takes an array of assets and a callback when complete\n    /*\n    Crafty.load([\"sprite.png\"], function () {\n        Crafty.scene(\"main\"); //when everything is loaded, run the main scene\n    });\n	*/\n\n    //black background with some loading text\n    Crafty.background(\"#000\");\n    Crafty.e(\"2D, DOM, Text\").attr({ w: 100, h: 20, x: 150, y: 120 })\n            .text(\"Loading\")\n            .css({ \"text-align\": \"center\", \"color\":\"#FFF\" });\n\n    Crafty.scene(\"main\");\n});",
 			"file": "js/scenes/loading.js",
-			"file_size": 572,
-			"file_write_time": 129933896308694480,
 			"settings":
 			{
 				"buffer_size": 515,
@@ -50,7 +59,7 @@
 			"file": "js/componants/battleproblems.js",
 			"settings":
 			{
-				"buffer_size": 3772,
+				"buffer_size": 5155,
 				"line_ending": "Windows"
 			}
 		},
@@ -58,7 +67,7 @@
 			"file": "js/componants/battlescreens.js",
 			"settings":
 			{
-				"buffer_size": 3578,
+				"buffer_size": 4619,
 				"line_ending": "Windows"
 			}
 		},
@@ -74,7 +83,7 @@
 			"file": "js/componants/battlesolutions.js",
 			"settings":
 			{
-				"buffer_size": 3627,
+				"buffer_size": 7145,
 				"line_ending": "Windows"
 			}
 		},
@@ -82,7 +91,7 @@
 			"file": "js/componants/battle.js",
 			"settings":
 			{
-				"buffer_size": 2997,
+				"buffer_size": 3352,
 				"line_ending": "Windows",
 				"name": "Crafty.c(\"Annoying\", {"
 			}
@@ -91,7 +100,7 @@
 			"file": "js/scenes/main.js",
 			"settings":
 			{
-				"buffer_size": 1386,
+				"buffer_size": 1606,
 				"line_ending": "Windows"
 			}
 		}
@@ -120,6 +129,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Andrew/AppData/Local/Temp/scp37566/iworry/wp-content/themes/iworry/style.css",
 		"/C/Users/Andrew/AppData/Local/Temp/scp07182/iworry/wp-content/themes/iworry/js/script.js",
 		"/C/Users/Andrew/AppData/Local/Temp/scp22268/iworry/wp-content/themes/iworry/frontpage.php",
 		"/C/Users/Andrew/AppData/Local/Temp/scp18379/iworry/wp-content/themes/iworry/style.css",
@@ -246,8 +256,7 @@
 		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_about.php",
 		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_auction.php",
 		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/sidebar_news.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/news.php",
-		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/category.php"
+		"/C/xampp/htdocs/dswf/wp-content/themes/sheldrick/news.php"
 	],
 	"find":
 	{
@@ -317,7 +326,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -379,15 +388,19 @@
 					"file": "js/componants/battleproblems.js",
 					"settings":
 					{
-						"buffer_size": 3772,
+						"buffer_size": 5155,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3131,
-								3131
+								3844,
+								3844
+							],
+							[
+								4617,
+								4617
 							]
 						],
 						"settings":
@@ -397,7 +410,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1401.0,
+						"translation.y": 1176.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -407,15 +420,15 @@
 					"file": "js/componants/battlescreens.js",
 					"settings":
 					{
-						"buffer_size": 3578,
+						"buffer_size": 4619,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3377,
-								3386
+								1073,
+								1091
 							]
 						],
 						"settings":
@@ -425,7 +438,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1094.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -453,7 +466,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 294.0,
+						"translation.y": 210.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -463,15 +476,15 @@
 					"file": "js/componants/battlesolutions.js",
 					"settings":
 					{
-						"buffer_size": 3627,
+						"buffer_size": 7145,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3529,
-								3486
+								3923,
+								3923
 							]
 						],
 						"settings":
@@ -481,7 +494,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1053.0,
+						"translation.y": 1529.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -489,7 +502,7 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -497,15 +510,15 @@
 					"file": "js/componants/battle.js",
 					"settings":
 					{
-						"buffer_size": 2997,
+						"buffer_size": 3352,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1748,
-								1748
+								813,
+								813
 							]
 						],
 						"settings":
@@ -516,7 +529,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -526,20 +539,22 @@
 					"file": "js/scenes/main.js",
 					"settings":
 					{
-						"buffer_size": 1386,
+						"buffer_size": 1606,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								847,
-								847
+								1258,
+								1258
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -578,7 +593,7 @@
 		"cols":
 		[
 			0.0,
-			0.391468369124,
+			0.577771329078,
 			1.0
 		],
 		"rows":
